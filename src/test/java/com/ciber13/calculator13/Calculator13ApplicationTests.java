@@ -3,11 +3,20 @@ package com.ciber13.calculator13;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class Calculator13ApplicationTests {
+import static org.junit.Assert.assertEquals;
 
-	@Test
-	void contextLoads() {
-	}
+@SpringBootTest
+public class Calculator13ApplicationTests {
+
+    private Calculator calculator = new Calculator();
+
+    @Test
+    void contextLoads() {
+    }
+
+    @Test
+    public void testSum() {
+        assertEquals(5, calculator.sum(2, 3));
+    }
 
 }
